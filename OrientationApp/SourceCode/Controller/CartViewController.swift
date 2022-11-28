@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  CartViewController.swift
 //  OrientationApp
 //
 //  Created by Webappclouds on 9/7/22.
@@ -7,17 +7,15 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class CartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Home"
+        navigationItem.title = "Cart"
     }
     
-    @IBAction func navigateToCartViewController() {
+    @IBAction func navigateToAccountViewController() {
         let sb = UIStoryboard.init(name: "Main", bundle: .main)
-        let vc = sb.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
+        let vc = sb.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
 }

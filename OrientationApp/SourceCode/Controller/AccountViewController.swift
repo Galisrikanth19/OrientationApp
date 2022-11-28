@@ -8,7 +8,6 @@
 import UIKit
 
 class AccountViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Account"
@@ -17,18 +16,8 @@ class AccountViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //AppUtility.lockOrientation(.landscape)
-        // Or to rotate and lock
+        // Below line makes viewcontroller to rotate to landscape and lock the screen to landscape
          AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeLeft)
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         
     }
 
@@ -38,5 +27,4 @@ class AccountViewController: UIViewController {
         // Don't forget to reset when view is being removed
         AppUtility.lockOrientation(.all)
     }
-    
 }
